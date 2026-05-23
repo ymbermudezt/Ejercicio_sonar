@@ -1,4 +1,4 @@
-# Análisis Sonnarqube
+# Análisis SonnarQube
 
 Integrantes
 
@@ -8,7 +8,21 @@ Integrantes
 
 - David Felipe Batanero Molina (20241020092)
 
-# Comparación entre SonarQube y el análisis de malas prácticas
+## Resultados SonnarQube
+
+### Resultado general
+
+<img src="assets/overview.png">
+
+---
+
+### Listado de issues
+
+<img src="assets/issues.png" >
+
+---
+
+## Comparación entre SonarQube y el análisis de malas prácticas
 
 El análisis realizado con SonarQube complementa el análisis de malas prácticas del proyecto **Bot de Correo Spam**, ya que ambos enfoques evalúan la calidad del software desde perspectivas diferentes.
 
@@ -28,9 +42,9 @@ Por otro lado, SonarQube analiza directamente el código fuente para detectar pr
 
 ---
 
-## Principales issues detectados por SonarQube
+### Principales issues detectados por SonarQube
 
-### 1. Alta complejidad cognitiva
+#### 1. Alta complejidad cognitiva
 Se detectaron funciones demasiado complejas, especialmente en:
 - `ControlCorreo.py`
 - `ControlPrincipal.py`
@@ -39,7 +53,7 @@ Esto indica métodos con demasiadas decisiones, condicionales y responsabilidade
 
 ---
 
-### 2. Variables no utilizadas
+#### 2. Variables no utilizadas
 Se encontraron variables declaradas pero no utilizadas, como:
 - `status`
 - `result`
@@ -49,13 +63,13 @@ Esto reduce la claridad y limpieza del código.
 
 ---
 
-### 3. Problemas de estilo Python
+#### 3. Problemas de estilo Python
 Se detectó uso de estructuras menos recomendadas:
 - Uso de `map` en lugar de list comprehensions
 
 ---
 
-### 4. Convenciones de nombres
+#### 4. Convenciones de nombres
 Algunas variables no siguen el estándar `snake_case` de Python.
 
 Ejemplo:
@@ -70,7 +84,7 @@ correos_limpio
 
 ---
 
-## 🔗 Relación con el análisis de malas prácticas
+### 🔗 Relación con el análisis de malas prácticas
 
 Los resultados de SonarQube refuerzan directamente las malas prácticas identificadas en el proyecto.
 
@@ -82,15 +96,3 @@ En particular, ambos análisis coinciden en que existe:
 - Necesidad de refactorización para mejorar legibilidad
 
 Mientras el análisis de malas prácticas identifica los problemas desde una perspectiva de diseño y arquitectura, SonarQube los valida con evidencia técnica dentro del código fuente.
-
----
-
-## Conclusión
-
-Ambos enfoques se complementan:
-
-- El análisis de malas prácticas identifica problemas estructurales del sistema.
-- SonarQube detecta problemas técnicos concretos en la implementación.
-
-La combinación de ambos permite obtener una visión más completa del proyecto y mejorar su mantenibilidad, claridad y escalabilidad.
-```
